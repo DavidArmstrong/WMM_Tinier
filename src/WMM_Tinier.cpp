@@ -2,7 +2,7 @@
 WMM_Tinier.cpp
 WMM_Tinier Arduino Library C++ source
 David Armstrong
-Version 1.0.0 - August 6, 2021
+Version 1.0.1 - October 15, 2022
 https://github.com/DavidArmstrong/WMM_Tinier
 
 Resources:
