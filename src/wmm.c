@@ -93,7 +93,7 @@ void wmm_init(void)
 	uint8_t j;
 	uint8_t m;
 	uint8_t n;
-	uint8_t D2;
+	uint8_t D2wmm;
 	float gnm;
 	float hnm;
 	float dgnm;
@@ -145,7 +145,7 @@ void wmm_init(void)
 		*(snorm + n) = *(snorm + n - 1U) * (float)(2U * n - 1U) / (float)n;
 		j = 2U;
 		m = 0U;
-		for (D2 = n - m + 1U; D2 > 0U; D2--)
+		for (D2wmm = n - m + 1U; D2wmm > 0U; D2wmm--)
 		{
 			k[m][n] = (float)(((n - 1U) * (n - 1U)) - (m * m)) / (float)((2U * n - 1U) * (2U * n - 3U));
 			if (m > 0U)
@@ -215,7 +215,7 @@ void E0000(float glat, float glon, float time_years, float *dec)
     {
 		ar = ar * aor;
 		uint8_t m = 0U;
-		for (uint8_t D4 = n + 1U; D4 > 0U; D4--)
+		for (uint8_t D4wmm = n + 1U; D4wmm > 0U; D4wmm--)
 		{
 			// COMPUTE UNNORMALIZED ASSOCIATED LEGENDRE POLYNOMIALS AND DERIVATIVES VIA RECURSION RELATIONS
 			if (n == m)
