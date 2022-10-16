@@ -32,7 +32,7 @@ float wmm_get_date(uint8_t year, uint8_t month, uint8_t date);
 /**
  * Get the magnetic variation at a point on the earth's surface
  *
- * @param glat Latitude in degrees and fractional degrees, negative west
+ * @param glat Latitude in degrees and fractional degrees, negative south
  * @param glon Longitude in degrees and fractional degrees, negative west
  * @param time_years The date as returned from wmm_get_date
  * @param dec Pointer to float holding calculated magnetic variation (also known as declination). Negative is west.

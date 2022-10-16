@@ -22,8 +22,8 @@ Distributed as-is; no warranty is given.
 #include "wmm.c"
 
 // Need the following define for SAMD processors
-#if defined (ARDUINO_ARCH_SAMD)
-#define Serial SerialUSB
+#if defined(ARDUINO_SAMD_ZERO) && defined(SERIAL_PORT_USBVIRTUAL)
+  #define Serial SERIAL_PORT_USBVIRTUAL
 #endif
 
 // Public Methods //////////////////////////////////////////////////////////
@@ -69,9 +69,5 @@ float WMM_Tinier::magneticDeclination(float Latitude, float Longitude, uint8_t y
   float wmm_date = wmm_get_date(year, month, day);
   float variation;
   E0000(Latitude, Longitude, wmm_date, &variation);
-  spData.declination = variation;
-  spData.longitude = Longitude;
-  spData.latitude = Latitude;
-  spData.date = wmm_date;
   return variation;
 }

@@ -3,10 +3,10 @@
 
 WMM_Tinier - Arduino library for calculating geomagnetic variation
 
-  Version 1.0.0 - August 6, 2021
+  Version 1.0.1 - October 15, 2022
 
-  By David Armstrong
-  https://github.com/DavidArmstrong/WMM_Tinier
+  By David Armstrong<br>
+  https://github.com/DavidArmstrong/WMM_Tinier<br>
   See MIT LICENSE.md file
 
 
