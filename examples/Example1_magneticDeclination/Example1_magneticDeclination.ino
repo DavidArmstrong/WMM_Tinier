@@ -1,14 +1,14 @@
 /* WMM_Tinier Library - Computes geomagnetic declination for date and location
  * David Armstrong
- * Version 1.0.0 - August 6, 2021
+ * Version 1.0.2 - March 8, 2025
  * Example1_magneticDeclination
 */
 
 #include <WMM_Tinier.h>
 
 // Need the following define for SAMD processors
-#if defined (ARDUINO_ARCH_SAMD)
-#define Serial SerialUSB
+#if defined(ARDUINO_SAMD_ZERO) && defined(SERIAL_PORT_USBVIRTUAL)
+#define Serial SERIAL_PORT_USBVIRTUAL
 #endif
 
 WMM_Tinier myDeclination;
@@ -21,11 +21,11 @@ void setup() {
   myDeclination.begin();
   Serial.println("We use a sample Longitude = -100 degrees 30 minutes");
   Serial.println("And a sample Latitude = 40 degrees 20 minutes");
-  Serial.println("On date = Sept 9, 2021");
+  Serial.println("On date = Sept 9, 2025");
   
   float longitude = myDeclination.decimalDegrees(-100, 30, 0);
   float latitude = myDeclination.decimalDegrees(40, 20, 0);
-  uint8_t year = 21;
+  uint8_t year = 25;
   uint8_t month = 9;
   uint8_t day = 9;
   Serial.println("The calculated geomagnetic declination is: ");

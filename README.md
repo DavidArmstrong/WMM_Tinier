@@ -3,14 +3,14 @@
 
 WMM_Tinier - Arduino library for calculating geomagnetic variation
 
-  Version 1.0.1 - October 15, 2022
+  Version 1.0.2 - March 8, 2025
 
   By David Armstrong<br>
   https://github.com/DavidArmstrong/WMM_Tinier<br>
   See MIT LICENSE.md file
 
 
-This Arduino library is a small embedded C99 implementation of the World Magnetic Model published by NOAA for calculating the magnetic field declination, or variation, at any point on the world's surface for a given date in the years 2020 to 2025.  Its core coding is copied, with permission, from https://github.com/miniwinwm/WMM_Tiny and it is recommended that internal code details be obtained at that URL.
+This Arduino library is a small embedded C99 implementation of the World Magnetic Model published by NOAA for calculating the magnetic field declination, or variation, at any point on the world's surface for a given date in the years 2025 to 2030.  Its core coding is copied, with permission, from https://github.com/miniwinwm/WMM_Tiny and it is recommended that internal code details be obtained at that URL.
 
 Geomagnetic variation is needed to account for the difference between the orientation of the earth's magnetic field in relation to true North.  This value varies slowly over time according to the observer's position on the earth.  Therefore, the value of variation is essential to know when using digital compass sensors so as to be able to determine a true heading.
 
@@ -38,4 +38,4 @@ void printDegMinSecs(float n)<br>
   Prints a float number of degrees to Serial in the form {deg}:{min}:{seconds}. The seconds may include a fractional part of two digits. If needed, a minus sign is printed in front of the number.  The numbers printed are not further formatted in any way.
 
 float magneticDeclination(float Latitude, float Longitude, uint8_t year, uint8_t month, uint8_t day)<br>
-  Sets the Longitude, Latitude, and date for any position on the earth that will be used to calculate the magnetic declination.  Coordinates are in degrees, and can range from -90. to +90. for Latitude, and -180. to +180. for Longitude.  The Date must be input with a 2-digit year, representing a date between 2020.0 to 2025.0, inclusive.  (So a year of 2021 must be entered as just 21.) The geomagnetic declination is returned as a float representing degrees. A positive value means that a compass will point East of North by that amount in degrees.
+  Sets the Longitude, Latitude, and date for any position on the earth that will be used to calculate the magnetic declination.  Coordinates are in degrees, and can range from -90. to +90. for Latitude, and -180. to +180. for Longitude.  The Date must be input with a 2-digit year, representing a date between 2025.0 to 2030.0, inclusive.  (So a year of 2025 must be entered as just 25.) The geomagnetic declination is returned as a float representing degrees. A positive value means that a compass will point East of North by that amount in degrees.
