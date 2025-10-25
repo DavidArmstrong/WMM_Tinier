@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define WMM_EPOCH		2020.0f
+#define WMM_EPOCH		2025.0f
 
 typedef struct
 {
@@ -21,7 +21,7 @@ void wmm_init(void);
 /**
  * Get the date in WMM format
  *
- * @param year Year in 2 digit format of 21st centuary, i.e. 20 represents 2020
+ * @param year Year in 2 digit format of 21st centuary, i.e. 25 represents 2025
  * @param month Month, 1 to 12
  * @param date Date of month, 1 to 31
  * @return Date in WMM format
